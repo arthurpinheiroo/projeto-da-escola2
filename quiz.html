@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="score-container">
+            Perguntas restantes: <span id="questionsRemaining">0</span>
+        </div>
+        <h2 id="question">Pergunta do Quiz</h2>
+        <div id="quiz">
+            <ul class="answer-options">
+                <li id="A" class="answer-option">Resposta A</li>
+                <li id="B" class="answer-option">Resposta B</li>
+                <li id="C" class="answer-option">Resposta C</li>
+                <li id="D" class="answer-option">Resposta D</li>
+            </ul>
+            <!-- Botão de responder -->
+            <button id="answerBtn" class="hide">
+                <i class="fas fa-check"></i> Responder
+            </button>
+        </div>
+
+        <!-- Botões de ação ao final do quiz -->
+        <div class="quiz-actions hide">
+            <button class="restart" id="restartBtn"><i class="fas fa-redo"></i> Recomeçar Quiz</button>
+            <button class="exit-quiz" id="exitBtn"><i class="fas fa-sign-out-alt"></i> Sair Quiz</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
