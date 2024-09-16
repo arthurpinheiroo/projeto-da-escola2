@@ -351,3 +351,13 @@ font-size: 15px;
 }
 
 }
+
+@media screen and (max-width: 1366px) {
+    .circle {
+        position: absolute;
+        top: 57%;
+        left: 80%;
+        height: 450px;
+        width: 450px;
+    }
+}
