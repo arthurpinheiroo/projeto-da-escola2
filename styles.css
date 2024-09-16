@@ -391,18 +391,18 @@ footer {
 
 @media screen and (max-width: 1366px) {
 
-    #tip-generator {
-        position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
-        z-index: 2; /* Certifica-se de que esteja acima da imagem */
-        top: 55%; /* Centraliza verticalmente */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translate(-50%, -50%); /* Centraliza perfeitamente o conteúdo */
-        text-align: center;
-        padding: 30px;
-        border-radius: 20px;
-        font-size: 24px;
-        width: 500px;
-        color: rgb(255, 255, 255);
+    @media screen and (max-width: 1366px) {
+        #tip-generator {
+            position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
+            top: 50%; /* Ajusta a posição verticalmente */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translate(-52%, 60%); /* Corrige a centralização horizontal */
+            padding: 30px;
+            border-radius: 20px;
+            font-size: 24px;
+            width: 500px;
+            color: rgb(255, 255, 255);
+        }
     }
 
 }
@@ -410,11 +410,11 @@ footer {
 @media screen and (max-width: 1279px) {
 
     #tip-generator {
-        position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
+        position: relative; /* Posiciona o gerador de dicas sobre a imagem */
         z-index: 2; /* Certifica-se de que esteja acima da imagem */
-        top: 15%; /* Centraliza verticalmente */
+        top: 65%; /* Centraliza verticalmente */
         left: 50%; /* Centraliza horizontalmente */
-        transform: translate(-50%, -50%); /* Centraliza perfeitamente o conteúdo */
+        transform: translate(-50%, -160%); /* Centraliza perfeitamente o conteúdo */
         text-align: center;
         padding: 30px;
         border-radius: 20px;
