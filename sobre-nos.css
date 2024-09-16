@@ -361,3 +361,26 @@ font-size: 15px;
         width: 450px;
     }
 }
+
+@media screen and (max-width: 1600px) {
+.container {
+    position: absolute;
+    left: 35%;
+    top: 30%;
+}
+
+.circle {
+    position: absolute;
+    top: 85%;
+    left: 58%;
+    height: 450px;
+    width: 450px;
+}
+
+.img1 {
+    position: absolute;
+    top: 72%;
+    left: 30%;
+}
+
+}

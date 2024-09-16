@@ -525,3 +525,64 @@ nav ul li a:hover {
     }
 
 }
+
+@media screen and (max-width: 1600px) {
+   header {
+    position: absolute;
+    left: 10%;
+   }
+   
+   .h1 p {
+    font-size: 1.0em;
+   }
+
+   .h1 {
+    position: absolute;
+    top: 25%;
+   }
+
+   .quiz-btn {
+    position: absolute;
+    top: 40%;
+   }
+
+   .p3 {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+   }
+
+   .info {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+   }
+
+    #img1 {
+        width: 180%;
+    }
+
+    #img1 > img {
+        width: 140%;
+        height: 70%; /* Mantém a proporção da imagem */
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        z-index: -1;
+    }
+
+    #img1::after {
+        content: '';
+        width: 130%;
+        height: 70%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        z-index: 0;
+        pointer-events: none;
+    }
+}
