@@ -412,7 +412,7 @@ footer {
     #tip-generator {
         position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
         z-index: 2; /* Certifica-se de que esteja acima da imagem */
-        top: 65%; /* Centraliza verticalmente */
+        top: 15%; /* Centraliza verticalmente */
         left: 50%; /* Centraliza horizontalmente */
         transform: translate(-50%, -50%); /* Centraliza perfeitamente o conteúdo */
         text-align: center;
