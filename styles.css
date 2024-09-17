@@ -389,6 +389,90 @@ footer {
 
 /* Media Queries */
 
+@media screen and (max-width: 1600px) {
+    .nav-list {
+        position: relative;
+        left: 3%;
+    }
+    
+        .header-content h1 {
+            position: relative;
+            left: 3%;
+        }
+    
+        #tip-generator {
+        position: absolute;
+        left: 52%;
+        top: 43%;
+        font-size: 1.0rem;
+        width: 450px;
+    }
+    
+    .img1 {
+        background-color: #000; /* Fundo preto por trás da imagem */
+        position: relative; /* Necessário para que o ::after funcione corretamente */
+        width: 600px;
+        height: 350px; /* Define a altura do contêiner para corresponder à imagem */
+        left: 8%;
+    }
+    
+    .tex-1 {
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+    
+    .tex-2 {
+        margin-left: 30%;
+        margin-top: 20%;
+    }
+    
+    .tex-3 {
+        margin-left: 30%;
+        margin-top: 20%;
+    }
+    
+    .img1::after {
+        z-index: 1; /* Define que o ::after estará acima da imagem */
+        content: '';
+        position: relative; /* Permite o posicionamento do ::after */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay com opacidade para escurecer a imagem */
+        pointer-events: none; /* Evita que o overlay bloqueie interações */
+    }
+    
+    .img1 > img {
+        z-index: 0; /* A imagem ficará atrás do conteúdo posicionado acima */
+        width: 1350%;
+        height: 100%;
+        object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+        position: relative; /* Para manter a imagem posicionada corretamente */
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .57; /* Controla a opacidade da imagem */
+        transition: background .3s, border-radius .3s, opacity .3s;
+    }
+    
+    #contact {
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        backdrop-filter: blur(6px);
+        margin-top: 40px;
+        animation: fadeIn 2s ease-in-out;
+        width: 500px;
+        max-width: 1000px;
+        position: relative;
+        left: 13%;
+        background-color: #091246;
+        color: white;
+    }
+    
+    }
+
 @media screen and (max-width: 1366px) {
 
     @media screen and (max-width: 1366px) {
@@ -437,6 +521,8 @@ footer {
 
 /* Para dispositivos com largura de até 1024px */
 @media screen and (max-width: 1024px) {
+
+    /* Ajuste para o header */
     header h1 {
         font-size: 2.2em;
     }
@@ -450,29 +536,70 @@ footer {
         left: -1%;
     }
 
+    /* Estilização do botão de dicas */
     #tip-generator {
-        font-size: 1.5em;
-        width: 80%;
-        left: -2%;
-        top: 20%;
+        position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
+        z-index: 2; /* Certifica-se de que esteja acima da imagem */
+        top: 53%; /* Ajuste conforme necessário */
+        left: 509px; /* Alinha horizontalmente com a transformação */
+        transform: translate(-50%, -50%); /* Centraliza perfeitamente o conteúdo */
+        text-align: center;
+        padding: 30px;
+        border-radius: 20px;
+        font-size: 15px;
+        width: 400px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.5); /* Preto com 50% de transparência */
     }
 
+    /* Ajustes de largura para outras seções */
     #about, #contact {
         width: 90%;
+        
     }
 
+    #contact {
+        position: absolute;
+        left: 5%;
+    }
+
+    /* Ajustes para o contêiner da imagem */
+    .img1 {
+        background-color: #000;
+        position: relative;
+        width: 100%; /* Use largura de 100% para ser responsivo */
+        height: 350px; /* Altura fixa */
+        left: 0;
+    }
+
+    /* Overlay para escurecer a imagem */
+    .img1::after {
+        z-index: 1;
+        content: '';
+        position: absolute; /* Coloca o ::after em posição relativa ao contêiner pai */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay */
+        pointer-events: none;
+    }
+
+    /* Estilização da imagem */
     .img1 > img {
-        max-width: 800px;
+        z-index: 0;
+        width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
+        height: 100%; /* Ajusta a altura para preencher o contêiner */
+        object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.57; /* Controla a opacidade da imagem */
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
     }
+}
 
-    .tex-1, .tex-2, .tex-3 {
-        width: 100%;
-        max-width: 500px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona a sombra */
-        border-radius: 10px; /* Arredonda as bordas */
-        transition: transform 0.3s ease; /* Adiciona uma transição suave ao redimensionamento */
-        margin-top: 20px;
-    }
     
     .tex-1 {
         margin-left: 20%;
@@ -488,7 +615,8 @@ footer {
         margin-left: 20%;
         margin-top: 20%;
     }
-}
+
+
 
 /* Para dispositivos com largura de até 768px */
 @media screen and (max-width: 768px) {
@@ -682,86 +810,3 @@ header {
 
 }
 
-@media screen and (max-width: 1600px) {
-.nav-list {
-    position: relative;
-    left: 3%;
-}
-
-    .header-content h1 {
-        position: relative;
-        left: 3%;
-    }
-
-    #tip-generator {
-    position: absolute;
-    left: 52%;
-    top: 43%;
-    font-size: 1.0rem;
-    width: 450px;
-}
-
-.img1 {
-    background-color: #000; /* Fundo preto por trás da imagem */
-    position: relative; /* Necessário para que o ::after funcione corretamente */
-    width: 600px;
-    height: 350px; /* Define a altura do contêiner para corresponder à imagem */
-    left: 8%;
-}
-
-.tex-1 {
-    margin-left: 30%;
-    margin-top: 5%;
-}
-
-.tex-2 {
-    margin-left: 30%;
-    margin-top: 20%;
-}
-
-.tex-3 {
-    margin-left: 30%;
-    margin-top: 20%;
-}
-
-.img1::after {
-    z-index: 1; /* Define que o ::after estará acima da imagem */
-    content: '';
-    position: relative; /* Permite o posicionamento do ::after */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay com opacidade para escurecer a imagem */
-    pointer-events: none; /* Evita que o overlay bloqueie interações */
-}
-
-.img1 > img {
-    z-index: 0; /* A imagem ficará atrás do conteúdo posicionado acima */
-    width: 1350%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
-    position: relative; /* Para manter a imagem posicionada corretamente */
-    top: 0;
-    left: 0;
-    background-color: #000;
-    opacity: .57; /* Controla a opacidade da imagem */
-    transition: background .3s, border-radius .3s, opacity .3s;
-}
-
-#contact {
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    backdrop-filter: blur(6px);
-    margin-top: 40px;
-    animation: fadeIn 2s ease-in-out;
-    width: 500px;
-    max-width: 1000px;
-    position: relative;
-    left: 13%;
-    background-color: #091246;
-    color: white;
-}
-
-}

@@ -1,16 +1,17 @@
 body {
-    font-family: 'Roboto', sans-serif;
     background-color: white;
     color: #000000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Permite que os elementos comecem de cima */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
     padding: 20px;
     line-height: 1.6; /* Melhor legibilidade */
     font-family: 'Poppins';
+    position: relative; /* Torna o corpo posicionado para permitir a manipulação de posições dos elementos internos */
 }
+
 
 header {
     width: 100%;
@@ -205,7 +206,7 @@ header {
 
     .container p {
         position: relative;
-        left: -8%;
+        left: -30%;
     }
 
 }
@@ -384,3 +385,4 @@ font-size: 15px;
 }
 
 }
+

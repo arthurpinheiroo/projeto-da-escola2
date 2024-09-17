@@ -103,11 +103,13 @@ nav ul li a:hover {
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     width: 150px;
+    height: 50px; /* Define a altura do botão */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+
 
 #quiz-btn:hover {
     transform: translateY(-10px);
@@ -179,8 +181,8 @@ nav ul li a:hover {
 }
 
 .info-box {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
     opacity: 0;
@@ -229,23 +231,18 @@ nav ul li a:hover {
     align-items: center;
     justify-content: flex-end;
     padding: 0 35px;
+    border: none;
     border-top: 1px solid lightgrey;
+    border-radius: 510px;
 }
 
-    .buttons button {
-    margin: 0 5px;
-    height: 40px;
-    width: 100px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.buttons {
+    border: none !important;
+    border-radius: 50px !important;
 }
 
 .buttons button.continuar {
+    margin: 5px;
     color: white;
     background: rgb(27, 226, 27);
 }
@@ -266,18 +263,65 @@ nav ul li a:hover {
 
 /* Ajustes para resolução 1600x900 */
 @media screen and (max-width: 1600px) {
+    header {
+     position: absolute;
+     left: 10%;
+    }
+    
     .h1 p {
-        font-size: 2.5vw;
+     font-size: 1.0em;
     }
-
-    #quiz-btn {
-        width: 10px;
+ 
+    .h1 {
+     position: absolute;
+     top: 25%;
     }
-
-    .p3 p {
-        font-size: 28px;
+ 
+    .quiz-btn {
+     position: absolute;
+     top: 40%;
     }
-}
+ 
+    .p3 {
+     position: absolute;
+     top: 65%;
+     left: 20%;
+    }
+ 
+    .info {
+     position: absolute;
+     top: 80%;
+     left: 10%;
+    }
+ 
+     #img1 {
+         width: 180%;
+     }
+ 
+     #img1 > img {
+         width: 140%;
+         height: 70%; /* Mantém a proporção da imagem */
+         object-fit: cover;
+         display: block;
+         margin: 0;
+         padding: 0;
+         border: 0;
+         box-shadow: none;
+         z-index: -1;
+     }
+ 
+     #img1::after {
+         content: '';
+         width: 130%;
+         height: 70%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+         z-index: 0;
+         pointer-events: none;
+     }
+ }
 
 /* Ajustes para resolução 1440x900 */
 @media screen and (max-width: 1440px) {
@@ -326,9 +370,12 @@ nav ul li a:hover {
 .pqs {
     position: absolute;
     top: 10%;
+    left: -10%;
 }
 
 }
+
+
 
 /* Ajustes para resolução 1366x768 */
 @media screen and (max-width: 1366px) {
@@ -356,41 +403,77 @@ nav ul li a:hover {
 
 /* Ajustes para resolução menor que 1024px */
 @media screen and (max-width: 1024px) {
+    .nav-list {
+        position: absolute;
+        left: 23%;
+    }
+
     .quiz-btn {
-        top: 80%;
-        width: 90%;
+        position: absolute;
+        top: 35%;  /* Ajuste a altura do botão conforme necessário */
+        left: 50%;  /* Centraliza o botão horizontalmente */
+        transform: translate(-230%, 340%);  /* Centraliza o botão horizontal e verticalmente */
+    }
+
+    
+
+    #quiz-btn {
+        width: 200px;  /* Ajuste o tamanho do botão conforme necessário */
+        height: 40px;  /* Ajuste a altura do botão */
     }
 
     #img1 {
+        position: relative;
+        width: 1024px;
+        height: 110vh; /* Ajuste para ocupar a altura total da viewport */
+        overflow: hidden;
+    }
+    
+    #img1::after {  
+        content: '';
         width: 100%;
+        height: 70%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        z-index: 0;
+        pointer-events: none;
     }
 
-    #img1 > img {
-        width: 100%;
-        height: 100%; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        z-index: -1;
+    .info { 
+        position: absolute;
+        width: 100%; /* Mantém dentro do contêiner */       
+        padding: 20px;
+        z-index: 1; /* Garante que a info esteja acima do gradiente */
     }
 
+   .pqs {
+    position: absolute;
+    top: 290%;
+    left: -4%;
+    width: 850px;
+   }
 
 
-    .p3 {
+
+    #p3 {
+        position: absolute;
         left: 10%;
+        top: 75%; /* Verifique se essa posição faz sentido no layout */
         width: 80%;
     }
 
-    .h1 p {
-        font-size: 3.5vw;
+    .h1 {
+        position: absolute;
+        top: 25%;
     }
-    
-    
 
+    .h1 p {
+        font-size: 2.5vw; /* Responsivo baseado na largura da viewport */
+    }
 }
+
 
 /* Ajustes para telas menores que 768px */
 @media screen and (max-width: 768px) {
@@ -490,99 +573,5 @@ nav ul li a:hover {
 
 }
 
-@media screen and (max-width: 1366px) {
-    #img1 {
-        width: 100%;
-    }
 
-    #img1 > img {
-        width: 100%;
-        height: 100%; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        z-index: -1;
-    }
 
-    #img1::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    .p3 {
-        position: absolute;
-        top: 90%;
-    }
-
-}
-
-@media screen and (max-width: 1600px) {
-   header {
-    position: absolute;
-    left: 10%;
-   }
-   
-   .h1 p {
-    font-size: 1.0em;
-   }
-
-   .h1 {
-    position: absolute;
-    top: 25%;
-   }
-
-   .quiz-btn {
-    position: absolute;
-    top: 40%;
-   }
-
-   .p3 {
-    position: absolute;
-    top: 65%;
-    left: 20%;
-   }
-
-   .info {
-    position: absolute;
-    top: 80%;
-    left: 10%;
-   }
-
-    #img1 {
-        width: 180%;
-    }
-
-    #img1 > img {
-        width: 140%;
-        height: 70%; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        z-index: -1;
-    }
-
-    #img1::after {
-        content: '';
-        width: 130%;
-        height: 70%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
-    }
-}
