@@ -473,9 +473,12 @@ footer {
     
     }
 
-@media screen and (max-width: 1366px) {
-
     @media screen and (max-width: 1366px) {
+       .navbar {
+        position: relative;
+        left: -3%;
+       }
+       
         #tip-generator {
             position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
             top: 50%; /* Ajusta a posição verticalmente */
@@ -483,13 +486,76 @@ footer {
             transform: translate(-52%, 60%); /* Corrige a centralização horizontal */
             padding: 30px;
             border-radius: 20px;
-            font-size: 24px;
-            width: 500px;
+            font-size: 15px !important; /* Força a aplicação do font-size */
+            width: 450px !important ;
             color: rgb(255, 255, 255);
         }
-    }
 
-}
+        .tex-1 {
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+        
+        .tex-2 {
+            margin-left: 30%;
+            margin-top: 20%;
+        }
+        
+        .tex-3 {
+            margin-left: 30%;
+            margin-top: 20%;
+        }
+    
+        .header-content h1 {
+            left: 1px;
+        }
+
+        .img1 {
+            background-color: #000;
+            position: relative;
+            width: 100%; /* Use largura de 100% para ser responsivo */
+            height: 350px; /* Altura fixa */
+            left: 0;
+        }
+        
+        /* Overlay para escurecer a imagem */
+        .img1::after {
+            z-index: 1;
+            content: '';
+            position: absolute; /* Coloca o ::after em posição relativa ao contêiner pai */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay */
+            pointer-events: none;
+        }
+        
+        /* Estilização da imagem */
+        .img1 > img {
+            z-index: 0;
+            width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
+            height: 100%; /* Ajusta a altura para preencher o contêiner */
+            object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.57; /* Controla a opacidade da imagem */
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        }
+
+        #contact {
+            width: 90%;
+            left: 7%;
+        }
+
+    }
+    
+
+ /* Ajustes para o contêiner da imagem */
+
+
+
 
 @media screen and (max-width: 1279px) {
 
@@ -521,6 +587,10 @@ footer {
 
 /* Para dispositivos com largura de até 1024px */
 @media screen and (max-width: 1024px) {
+
+    .nav-list {
+    left: 1%;
+    }
 
     /* Ajuste para o header */
     header h1 {

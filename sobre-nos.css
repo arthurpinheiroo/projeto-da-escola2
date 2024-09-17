@@ -166,25 +166,29 @@ nav ul li a:hover {
 
 /* Media Queries */
 
-@media screen and (max-width: 1280px) {
-
-header {
-    position: absolute;
-    left: 10%;
-}
-
-.circle {
-    position: absolute;
-    top:  57%;
-    left: 90%;
-}
-
-.img1 {
+@media screen and (max-width: 1600px) {
+    .container {
         position: absolute;
-        left: 74%;
-}
-
-}
+        left: 35%;
+        top: 30%;
+    }
+    
+    .circle {
+        position: absolute;
+        top: 85%;
+        left: 58%;
+        height: 450px;
+        width: 450px;
+    }
+    
+    .img1 {
+        position: absolute;
+        top: 72%;
+        left: 30%;
+    }
+    
+    }
+    
 
 @media screen and (max-width: 1440px) {
     .img1 {
@@ -211,8 +215,59 @@ header {
 
 }
 
+@media screen and (max-width: 1366px) {
+    .circle {
+        position: absolute;
+        top: 55%;
+        left: 80%;
+        height: 450px;
+        width: 450px;
+    }
+
+    .container {
+        position: absolute;
+        left: 20%;
+    }
+
+    .container h2 {
+        position: relative;
+        left: -30%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1280px) {
+
+header {
+    position: absolute;
+    left: 10%;
+}
+
+
+.circle {
+    position: absolute;
+    top:  57%;
+    left: 90%;
+}
+
+.img1 {
+        position: absolute;
+        left: 74%;
+}
+
+}
+
+
+
 /* Para dispositivos com largura de até 1024px */
 @media screen and (max-width: 1024px) {
+    .nav-list {
+        position: absolute;
+        left: 24%;
+    }
+    
     header h1 {
         font-size: 2.2em;
     }
@@ -225,11 +280,12 @@ header {
 
     #about p {
         width: 60%;
+        left: -10%;
     }
 
     .container {
         width: 90%;
-        left: 5%;
+        left: 10%;
         top: 25%;
     }
 
@@ -239,15 +295,22 @@ header {
     }
 
     .img1 {
-        width: 500px;
+        width: 400px;
+        position: absolute;
+        left: 56%;
+        top: 33%;
+    }
+
+    .img1 img {
+        width: 360px;
     }
 
     .circle {
-        width: 445px;
-        height: 445px;
+        width: 400px;
+        height: 400px;
         position: absolute;
         top: 55%;
-        left: 89%;
+        left: 74%;
     }
 }
 
@@ -353,36 +416,6 @@ font-size: 15px;
 
 }
 
-@media screen and (max-width: 1366px) {
-    .circle {
-        position: absolute;
-        top: 57%;
-        left: 80%;
-        height: 450px;
-        width: 450px;
-    }
-}
 
-@media screen and (max-width: 1600px) {
-.container {
-    position: absolute;
-    left: 35%;
-    top: 30%;
-}
 
-.circle {
-    position: absolute;
-    top: 85%;
-    left: 58%;
-    height: 450px;
-    width: 450px;
-}
-
-.img1 {
-    position: absolute;
-    top: 72%;
-    left: 30%;
-}
-
-}
 

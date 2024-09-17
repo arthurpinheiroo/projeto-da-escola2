@@ -208,8 +208,10 @@ const totalQuestionsEl = document.getElementById('totalQuestions');
 const quizContainer = document.querySelector('.quiz-container');
 const quizActions = document.querySelector('.quiz-actions');
 
-// Inicializa o quiz
-loadQuiz();
+// Inicializa o quiz após o DOM estar carregado
+document.addEventListener("DOMContentLoaded", () => {
+    loadQuiz();
+});
 
 function loadQuiz() {
     resetState();
@@ -222,7 +224,7 @@ function loadQuiz() {
         answerOptions[2].textContent = currentQuizData.c;
         answerOptions[3].textContent = currentQuizData.d;
 
-        questionsRemainingEl.textContent = quizData.length - currentQuiz - 1;
+        questionsRemainingEl.textContent = `Perguntas restantes: ${quizData.length - currentQuiz - 1}`;
     }
 }
 

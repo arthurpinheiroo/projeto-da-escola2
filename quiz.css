@@ -217,7 +217,7 @@ body {
 @media screen and (max-width: 1024px) {
     .quiz-container {
         width: 90%;
-        height: auto;
+        height: 60%;
     }
 
     #question {
@@ -231,8 +231,8 @@ body {
     }
 
     #answerBtn {
-        top: 90%;
-        left: 50%;
+        top: 87%;
+        left: 88%;
         transform: translateX(-50%);
         width: 120px;
     }

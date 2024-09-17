@@ -6,7 +6,7 @@ body {
 }
 
 #img1 > img {
-    width: 100%;
+    width: 99%;
     height: auto; /* Mantém a proporção da imagem */
     object-fit: cover;
     display: block;
@@ -225,40 +225,38 @@ nav ul li a:hover {
     color: rgb(37, 240, 37);
 }
 
-.info-box .buttons {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 35px;
-    border: none;
-    border-top: 1px solid lightgrey;
-    border-radius: 510px;
+.buttons button {
+    position: relative;
+    top: 0%;
+    left: 63%;
+    padding: 05px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent; /* Para criar um efeito de hover mais suave */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.buttons {
-    border: none !important;
-    border-radius: 50px !important;
-}
-
+/* Estilo específico para o botão "Continuar" */
 .buttons button.continuar {
-    margin: 5px;
+    background-color: rgb(27, 226, 27); /* Verde para o botão "Continuar" */
     color: white;
-    background: rgb(27, 226, 27);
 }
 
 .buttons button.continuar:hover {
-    background: rgb(51, 194, 51);
+    background-color: rgb(51, 194, 51); /* Verde mais escuro ao passar o mouse */
 }
 
+/* Estilo específico para o botão "Sair" */
 .buttons button.sair {
-    color: rgb(27, 226, 27);
-    border-color: rgb(27, 226, 27);
+    background-color: transparent; /* Fundo transparente por padrão */
+    color: rgb(27, 226, 27); /* Texto verde */
+    border-color: rgb(27, 226, 27); /* Borda verde */
 }
 
 .buttons button.sair:hover {
-    color: white;
-    background: rgb(27, 226, 27);
+    background-color: rgb(27, 226, 27); /* Fundo verde ao passar o mouse */
+    color: white; /* Texto branco ao passar o mouse */
 }
 
 /* Ajustes para resolução 1600x900 */
@@ -379,30 +377,100 @@ nav ul li a:hover {
 
 /* Ajustes para resolução 1366x768 */
 @media screen and (max-width: 1366px) {
-    .h1 p {
-        font-size: 3vw;
+    #img1 {
+        position: relative;
+        width: 120%;
+        height: 110vh; /* Ajuste para ocupar a altura total da viewport */
+        overflow: hidden;
+    }
+    
+    #img1::after {  
+        content: '';
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        z-index: 0;
+        pointer-events: none;
     }
 
+    #img1 > img {
+        width: 100%;
+        height: 70%; /* Mantém a proporção da imagem */
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        z-index: -1;
+    }
+    
+    .h1 {
+        position: absolute;
+        top: 25%;
+    }
+
+    .h1 p {
+        font-size: 2.0vw;
+    }
+
+    .quiz-btn {
+        position: absolute;
+        top: 35%;  /* Ajuste a altura do botão conforme necessário */
+        left: 35%;  /* Centraliza o botão horizontalmente */
+        transform: translate(-230%, 340%);  /* Centraliza o botão horizontal e verticalmente */
+    }
+
+    
+
     #quiz-btn {
-        width: 20vw;
+        width: 200px;  /* Ajuste o tamanho do botão conforme necessário */
+        height: 40px;  /* Ajuste a altura do botão */
     }
 
     .p3 p {
         font-size: 24px;
     }
 
-    .quiz-btn {
-        top: 78%;
-    }
 
     .p3 {
+        position: absolute;
+        top: 80%;
         left: 10%;
         width: 80%;
     }
+
+    .navbar {
+        position: absolute;
+        left: 25%;
+    }
+
+    .info { 
+        position: absolute;
+        width: 100%; /* Mantém dentro do contêiner */       
+        padding: 20px;
+        z-index: 1; /* Garante que a info esteja acima do gradiente */
+    }
+
+   .pqs {
+    position: absolute;
+    top: 290%;
+    left: 5%;
+    width: 850px;
+   }
+
+
 }
 
 /* Ajustes para resolução menor que 1024px */
 @media screen and (max-width: 1024px) {
+   body {
+    overflow-x: hidden;
+   }
+   
     .nav-list {
         position: absolute;
         left: 23%;
@@ -424,7 +492,7 @@ nav ul li a:hover {
 
     #img1 {
         position: relative;
-        width: 1024px;
+        width: 120%;
         height: 110vh; /* Ajuste para ocupar a altura total da viewport */
         overflow: hidden;
     }
@@ -439,6 +507,18 @@ nav ul li a:hover {
         background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
         z-index: 0;
         pointer-events: none;
+    }
+
+    #img1 > img {
+        width: 100%;
+        height: 70%; /* Mantém a proporção da imagem */
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        z-index: -1;
     }
 
     .info { 
