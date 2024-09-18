@@ -403,7 +403,7 @@ footer {
         #tip-generator {
         position: absolute;
         left: 50% !important;
-        top: 25% !important;
+        top: 50% !important;
         font-size: 1.0rem;
         width: 450px;
     }
@@ -726,6 +726,10 @@ footer {
     }
 }
 
+@media screen and (max-width: 720px) {
+
+}
+
 /* Para dispositivos com largura de até 480px */
 @media screen and (max-width: 480px) {
     header {
@@ -830,6 +834,7 @@ footer {
 }
 
 
+
 @media screen and (max-width: 320px) {
     .img1 > img {
         z-index: 0; /* A imagem ficará atrás do conteúdo posicionado acima */
@@ -879,4 +884,13 @@ header {
 }
 
 }
+
+@media screen and (max-width: 375px) {
+
+    #tip-generator {
+        position: relative;
+        top: 10% !important; 
+    }
+    
+    }
 
