@@ -246,19 +246,26 @@ nav ul li a:hover {
 
 header {
     position: absolute;
-    left: 10%;
+    left: -4%;
 }
 
 
 .circle {
     position: absolute;
-    top:  57%;
-    left: 90%;
+    width: 470px !important;
+    height: 470px !important;
+    top:  30% !important;
+    left: 80% !important;
 }
 
 .img1 {
         position: absolute;
-        left: 74%;
+        left: 64% !important;
+        top: 21% !important;}
+
+.container {
+    position: absolute;
+    left: 20% !important;
 }
 
 }

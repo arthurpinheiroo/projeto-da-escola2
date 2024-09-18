@@ -23,6 +23,13 @@ body {
     line-height: 1.6;
 }
 
+.navbar {
+    position: relative;
+    left: -1% !important;
+}
+
+
+
 /* Cabeçalho */
 header {
     width: 100%;
@@ -100,7 +107,7 @@ main {
     position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
     z-index: 2; /* Certifica-se de que esteja acima da imagem */
     top: 55%; /* Ajuste conforme necessário */
-    left: 909px; /* Alinha horizontalmente com a transformação */
+    left: 920px; /* Alinha horizontalmente com a transformação */
     transform: translate(-50%, -50%); /* Centraliza perfeitamente o conteúdo */
     text-align: center;
     padding: 30px;
@@ -177,7 +184,7 @@ main {
     width: 1300px;
     max-width: 1000px;
     position: relative;
-    left: -13%;
+    left: -18%;
     background-color: #091246;
     color: white;
 }
@@ -317,17 +324,17 @@ footer {
 }
 
 .tex-1 {
-    margin-left: 18%;
+    margin-left: 15% !important;
     margin-top: 15%;
 }
 
 .tex-2 {
-    margin-left: 18%;
+    margin-left: 15% !important;
     margin-top: 20%;
 }
 
 .tex-3 {
-    margin-left: 18%;
+    margin-left: 15% !important;
     margin-top: 20%;
 }
 
@@ -402,8 +409,8 @@ footer {
     
         #tip-generator {
         position: absolute;
-        left: 52% !important;
-        top: 58% !important;
+        left: 47% !important;
+        top: 25% !important;
         font-size: 1.0rem;
         width: 350px !important;
     }
@@ -437,9 +444,9 @@ footer {
     .img1 {
         background-color: #000;
         position: relative;
-        width: 100%; /* Use largura de 100% para ser responsivo */
-        height: 350px; /* Altura fixa */
-        left: 5%;
+        width: 88% !important; /* Use largura de 100% para ser responsivo */
+        height: 350px !important; /* Altura fixa */
+        left: 4% !important;
     }
     
     /* Overlay para escurecer a imagem */
@@ -458,14 +465,14 @@ footer {
     /* Estilização da imagem */
     .img1 > img {
         z-index: 0;
-        width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
-        height: 100%; /* Ajusta a altura para preencher o contêiner */
-        object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
-        position: absolute;
+        width: 120% !important; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
+        height: 100% !important; /* Ajusta a altura para preencher o contêiner */
+        object-fit: cover !important; /* Garante que a imagem preencha o contêiner sem distorção */
+        position: absolute !important;
         top: 0;
         left: 0;
-        opacity: 0.57; /* Controla a opacidade da imagem */
-        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        opacity: 0.57s !important; /* Controla a opacidade da imagem */
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s !important;
     }
     
     
@@ -567,8 +574,69 @@ footer {
 
  /* Ajustes para o contêiner da imagem */
 
+@media screen and (max-width: 1280px) {
 
+#tip-generator {
+    position: absolute;
+    top: 6% !important;
+    left: 49% !important;
+}
 
+.img1 {
+    background-color: #000;
+    position: relative;
+    width: 88% !important; /* Use largura de 100% para ser responsivo */
+    height: 350px !important; /* Altura fixa */
+    left: 4% !important;
+}
+
+/* Overlay para escurecer a imagem */
+.img1::after {
+    z-index: 1;
+    content: '';
+    position: absolute; /* Coloca o ::after em posição relativa ao contêiner pai */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay */
+    pointer-events: none;
+}
+
+/* Estilização da imagem */
+.img1 > img {
+    z-index: 0;
+    width: 100% !important; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
+    height: 100% !important; /* Ajusta a altura para preencher o contêiner */
+    object-fit: cover !important; /* Garante que a imagem preencha o contêiner sem distorção */
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    opacity: 0.57s !important; /* Controla a opacidade da imagem */
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s !important;
+}
+
+.tex-1 {
+    margin-left: 18% !important;
+    margin-top: 5%;
+}
+
+.tex-2 {
+    margin-left: 18% !important;
+    margin-top: 20%;
+}
+
+.tex-3 {
+    margin-left: 18% !important;
+    margin-top: 20%;
+}
+
+#contact {
+    position: relative;
+    left: 5%;
+}
+
+}
 
 @media screen and (max-width: 1279px) {
 
