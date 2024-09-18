@@ -402,32 +402,32 @@ footer {
     
         #tip-generator {
         position: absolute;
-        left: 52%;
-        top: 43%;
+        left: 50% !important;
+        top: 25% !important;
         font-size: 1.0rem;
         width: 450px;
     }
     
     .img1 {
-        background-color: #000; /* Fundo preto por trás da imagem */
-        position: relative; /* Necessário para que o ::after funcione corretamente */
-        width: 600px;
-        height: 350px; /* Define a altura do contêiner para corresponder à imagem */
-        left: 8%;
+        background-color: #000 !important; /* Fundo preto por trás da imagem */
+        position: relative !important; /* Necessário para que o ::after funcione corretamente */
+        width: 600px !important;
+        height: 350px !important; /* Define a altura do contêiner para corresponder à imagem */
+        left: 5% !important;
     }
     
     .tex-1 {
-        margin-left: 30%;
+        margin-left: 28% !important;
         margin-top: 5%;
     }
     
     .tex-2 {
-        margin-left: 30%;
+        margin-left: 28% !important;
         margin-top: 20%;
     }
     
     .tex-3 {
-        margin-left: 30%;
+        margin-left: 28% !important;
         margin-top: 20%;
     }
     
@@ -445,7 +445,7 @@ footer {
     
     .img1 > img {
         z-index: 0; /* A imagem ficará atrás do conteúdo posicionado acima */
-        width: 1350%;
+        width: 1350% !important;
         height: 100%;
         object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
         position: relative; /* Para manter a imagem posicionada corretamente */

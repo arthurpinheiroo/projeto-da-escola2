@@ -168,23 +168,27 @@ nav ul li a:hover {
 
 @media screen and (max-width: 1600px) {
     .container {
-        position: absolute;
-        left: 35%;
-        top: 30%;
+        position: absolute !important;
+        left: 35% !important;
+        top: 20% !important;
     }
     
+    .container h2 {
+        left: -10% !important;
+    }
+
     .circle {
         position: absolute;
-        top: 85%;
-        left: 58%;
-        height: 450px;
-        width: 450px;
+        top: 83% !important;
+        left: 56% !important;
+        height: 400px !important;
+        width: 400px !important;
     }
     
     .img1 {
-        position: absolute;
-        top: 72%;
-        left: 30%;
+        position: absolute !important;
+        top: 72% !important;
+        left: 30% !important;
     }
     
     }
