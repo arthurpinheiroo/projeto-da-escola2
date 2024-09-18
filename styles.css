@@ -402,19 +402,13 @@ footer {
     
         #tip-generator {
         position: absolute;
-        left: 50% !important;
-        top: 50% !important;
+        left: 52% !important;
+        top: 58% !important;
         font-size: 1.0rem;
-        width: 250px !important;
+        width: 350px !important;
     }
     
-    .img1 {
-        background-color: #000 !important; /* Fundo preto por trás da imagem */
-        position: relative !important; /* Necessário para que o ::after funcione corretamente */
-        width: 200px !important;
-        height: 150px !important; /* Define a altura do contêiner para corresponder à imagem */
-        left: -4% !important;
-    }
+  
     
     .tex-1, .tex-2, .tex-3 {
         width: 100%;
@@ -440,30 +434,40 @@ footer {
         margin-top: 20%;
     }
     
+    .img1 {
+        background-color: #000;
+        position: relative;
+        width: 100%; /* Use largura de 100% para ser responsivo */
+        height: 350px; /* Altura fixa */
+        left: 5%;
+    }
+    
+    /* Overlay para escurecer a imagem */
     .img1::after {
-        z-index: 1; /* Define que o ::after estará acima da imagem */
+        z-index: 1;
         content: '';
-        position: relative; /* Permite o posicionamento do ::after */
+        position: absolute; /* Coloca o ::after em posição relativa ao contêiner pai */
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay com opacidade para escurecer a imagem */
-        pointer-events: none; /* Evita que o overlay bloqueie interações */
+        background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay */
+        pointer-events: none;
     }
     
+    /* Estilização da imagem */
     .img1 > img {
-        z-index: 0; /* A imagem ficará atrás do conteúdo posicionado acima */
-        width: 350% !important;
-        height: 100% !important;
-        object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
-        position: relative; /* Para manter a imagem posicionada corretamente */
+        z-index: 0;
+        width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
+        height: 100%; /* Ajusta a altura para preencher o contêiner */
+        object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+        position: absolute;
         top: 0;
         left: 0;
-        background-color: #000;
-        opacity: .57; /* Controla a opacidade da imagem */
-        transition: background .3s, border-radius .3s, opacity .3s;
+        opacity: 0.57; /* Controla a opacidade da imagem */
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
     }
+    
     
     #contact {
         border-radius: 15px;
