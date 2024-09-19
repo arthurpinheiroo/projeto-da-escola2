@@ -811,7 +811,7 @@ footer {
     #tip-generator {
         position: absolute !important;
         left: 42% !important;
-        top: 25% !important;
+        top: 24% !important;
         font-size: 1.0rem;
         width: 350px !important;
 }
@@ -859,9 +859,25 @@ footer {
   }
 
   #contact {
-    width: 50%;
-    left: 15%;
+    width: 67%;
+    left: 10%;
 }
+
+.tex-1 {
+    margin-left: 10% !important;
+    margin-top: 5%;
+}
+
+.tex-2 {
+    margin-left: 10% !important;
+    margin-top: 20%;
+}
+
+.tex-3 {
+    margin-left: 10% !important;
+    margin-top: 20%;
+}
+
 }
 
 /* Para dispositivos com largura de até 480px */
