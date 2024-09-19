@@ -862,6 +862,7 @@ footer {
     width: 50%;
     left: 15%;
 }
+}
 
 /* Para dispositivos com largura de até 480px */
 @media screen and (max-width: 480px) {
@@ -1026,5 +1027,3 @@ header {
 }
 
 }
-
-
