@@ -691,7 +691,7 @@ footer {
     #tip-generator {
         position: absolute; /* Posiciona o gerador de dicas sobre a imagem */
         z-index: 2; /* Certifica-se de que esteja acima da imagem */
-        top: 53%; /* Ajuste conforme necessário */
+        top: 25% !important; /* Ajuste conforme necessário */
         left: 509px; /* Alinha horizontalmente com a transformação */
         transform: translate(-50%, -50%); /* Centraliza perfeitamente o conteúdo */
         text-align: center;
@@ -765,6 +765,16 @@ footer {
     .tex-3 {
         margin-left: 20%;
         margin-top: 20%;
+    }
+
+    @media screen and (max-width: 1020px) {
+        #tip-generator {
+            position: absolute !important;
+            left: 49% !important;
+            top: 26% !important;
+            font-size: 1.0rem;
+            width: 350px !important;
+    }
     }
 
  @media screen and (max-width: 920px) {
