@@ -358,6 +358,33 @@ header {
     }
 }
 
+@media screen and (min-width: 720px) {
+    .navbar {
+        position: relative;
+        left: 5%;
+    }
+    
+    .container {
+        position: absolute;
+        left: 28% !important;
+    }
+
+    .circle {
+        height: 400px !important;
+        width: 400px !important;
+        position: absolute;
+        top: 70% !important;
+        left: 50% !important;
+    }
+
+    .img1 {
+        position: absolute;
+        top: 59% !important;
+        left: 30% !important;
+    }
+
+}
+
 /* Para dispositivos com largura de até 480px */
 @media screen and (max-width: 480px) {
    
