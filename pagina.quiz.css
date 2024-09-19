@@ -550,7 +550,7 @@ nav ul li a:hover {
     .quiz-btn {
         position: absolute;
         top: 35%;  /* Ajuste a altura do botão conforme necessário */
-        left: 50%;  /* Centraliza o botão horizontalmente */
+        left: 46% !important;  /* Centraliza o botão horizontalmente */
         transform: translate(-230%, 340%);  /* Centraliza o botão horizontal e verticalmente */
     }
 
@@ -563,7 +563,7 @@ nav ul li a:hover {
 
     #img1 {
         position: relative;
-        width: 120%;
+        width: 135%;
         height: 110vh; /* Ajuste para ocupar a altura total da viewport */
         overflow: hidden;
     }
@@ -571,7 +571,7 @@ nav ul li a:hover {
     #img1::after {  
         content: '';
         width: 100%;
-        height: 70%;
+        height: 40%;
         position: absolute;
         top: 0;
         left: 0;
@@ -582,7 +582,7 @@ nav ul li a:hover {
 
     #img1 > img {
         width: 100%;
-        height: 70%; /* Mantém a proporção da imagem */
+        height: 40%; /* Mantém a proporção da imagem */
         object-fit: cover;
         display: block;
         margin: 0;
@@ -601,7 +601,7 @@ nav ul li a:hover {
 
    .pqs {
     position: absolute;
-    top: 290%;
+    top: -1050% !important;
     left: -4%;
     width: 850px;
    }
@@ -611,13 +611,13 @@ nav ul li a:hover {
     #p3 {
         position: absolute;
         left: 10%;
-        top: 75%; /* Verifique se essa posição faz sentido no layout */
+        top: 43%; /* Verifique se essa posição faz sentido no layout */
         width: 80%;
     }
 
     .h1 {
         position: absolute;
-        top: 25%;
+        top: 16%;
     }
 
     .h1 p {
