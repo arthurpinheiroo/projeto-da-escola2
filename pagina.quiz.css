@@ -642,7 +642,7 @@ nav ul li a:hover {
     }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (max-width: 720px) {
     header {
         position: absolute;
         left: 2% !important;
@@ -650,21 +650,37 @@ nav ul li a:hover {
 
     .pqs {
     position: absolute;
-    top: 30% !important;
+    top: -1000% !important;
     left: 15%;
     width: 300px;
  }   
 
-#quiz-btn {}
+.info-box {
+    position: fixed;
+    left: 40%;
+    top: 25%;
+}
 
 .p3 {
-    position: relative;
-    top: 28% !important;
+    position: absolute !important;
+    top: -508px !important;
 }
 
 .h1 {
+    width: 500px;
+    position: absolute;
+    top: 14% !important;
+    left: 5%;
+}
+
+.quiz-btn {
     position: absolute;
     top: 18% !important;
+    left: 68% !important;
+}
+
+.h1 p {
+    font-size: 20px !important;
 }
 
  #img1 {
