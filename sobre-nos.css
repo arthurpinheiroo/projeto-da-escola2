@@ -422,6 +422,10 @@ header {
     }
 }
 
+@media screen and (max-width: 337px) {
+    
+}
+
 @media screen and (max-width: 320px) {
 header {
     left: 35%;
