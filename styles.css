@@ -807,7 +807,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 720px) {
     #tip-generator {
         position: absolute !important;
         left: 42% !important;
