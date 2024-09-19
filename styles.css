@@ -767,6 +767,16 @@ footer {
         margin-top: 20%;
     }
 
+ @media screen and (max-width: 920px) {
+    #tip-generator {
+        position: absolute !important;
+        left: 49% !important;
+        top: 26% !important;
+        font-size: 1.0rem;
+        width: 350px !important;
+}
+ }
+
 @media screen and (max-width: 820px) {
     #tip-generator {
         position: absolute !important;
