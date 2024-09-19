@@ -767,7 +767,77 @@ footer {
         margin-top: 20%;
     }
 
+@media screen and (max-width: 820px) {
+    #tip-generator {
+        position: absolute !important;
+        left: 42% !important;
+        top: 24% !important;
+        font-size: 1.0rem;
+        width: 350px !important;
+}
 
+.img1 {
+    background-color: #000;
+    position: relative;
+    width: 80% !important;
+    height: 350px !important;
+    left: 1% !important;
+  }
+
+  .img1::after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+
+  .img1 > img {
+    z-index: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    opacity: 0.57s !important;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s !important;
+  }
+
+  .navbar {
+    position: relative;
+    left: -10% !important;
+  }
+
+  .header-content {
+    position: relative;
+    left: -5%;
+  }
+
+  #contact {
+    width: 67%;
+    left: 10%;
+}
+
+.tex-1 {
+    margin-left: 10% !important;
+    margin-top: 5%;
+}
+
+.tex-2 {
+    margin-left: 10% !important;
+    margin-top: 20%;
+}
+
+.tex-3 {
+    margin-left: 10% !important;
+    margin-top: 20%;
+}
+}
 
 /* Para dispositivos com largura de até 768px */
 @media screen and (max-width: 768px) {
