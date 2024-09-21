@@ -1276,6 +1276,12 @@ footer {
     }
 }
 
+@media screen and (max-height: 720px) {
+    #contact {
+        margin-top: 280%;
+    }
+}
+
 @media screen and (max-width: 420px) {
     #tip-generator {
         width: 290px;
