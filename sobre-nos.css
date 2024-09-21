@@ -653,6 +653,10 @@ nav ul li a:hover {
     }
 }
 
+@media screen and (max-width: 375px) {
+    
+}
+
 @media screen and (max-width: 337px) {
     /* Estilos específicos para telas menores, se necessário */
 }

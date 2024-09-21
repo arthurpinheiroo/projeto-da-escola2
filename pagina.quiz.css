@@ -1,27 +1,23 @@
-/* Estilo base - Aplica-se a resoluções grandes como 1920x1080 (Full HD) */
+/* Estilo base */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
+#img1 {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Ocupa 90% da altura da viewport */
+    overflow: hidden;
+}
+
 #img1 > img {
-    width: 99%;
+    width: 100%;
     height: auto; /* Mantém a proporção da imagem */
     object-fit: cover;
     display: block;
     margin: 0;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    z-index: -1;
-}
-
-#img1 {
-    position: relative;
-    width: 100%;
-    height: 90vh; /* Faz com que a imagem ocupe 80% da altura da viewport */
-    overflow: hidden;
 }
 
 #img1::after {
@@ -42,13 +38,13 @@ header {
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 30px;
-    animation: fadeIn 1s ease-in-out;
     position: absolute;
     top: 2%;
     left: 0;
     z-index: 1;
 }
 
+/* Navegação */
 nav ul {
     list-style: none;
     display: flex;
@@ -61,17 +57,16 @@ nav ul li {
     transition: transform 0.3s ease;
 }
 
-nav ul li:hover {
-    transform: translateY(-5px);
-}
-
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
     padding: 10px 20px;
     border-radius: 25px;
     transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: translateY(-5px);
 }
 
 nav ul li a:hover {
@@ -91,6 +86,7 @@ nav ul li a:hover {
     font-size: 2vw;
 }
 
+/* Botão */
 .quiz-btn {
     position: absolute;
     top: 73%;
@@ -110,11 +106,11 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
-
 #quiz-btn:hover {
     transform: translateY(-10px);
 }
 
+/* Informação */
 .info {
     position: absolute;
     top: 130%;
@@ -125,6 +121,7 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+/* Perguntas */
 .pqs {
     display: flex;
     flex-wrap: wrap;
@@ -147,6 +144,7 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Estilos adicionais */
 .p3 {
     position: absolute;
     top: 100%;
@@ -159,6 +157,7 @@ nav ul li a:hover {
     font-size: 30px;
 }
 
+/* Logo */
 .logo-png {
     position: absolute;
     list-style: none;
@@ -180,6 +179,7 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
+/* Info Box */
 .info-box {
     position: fixed;
     top: 40%;
@@ -191,7 +191,6 @@ nav ul li a:hover {
     width: 540px;
     background: #ffffff;
     border-radius: 5px;
-    position: fixed;
 }
 
 .info-box.show {
@@ -225,11 +224,10 @@ nav ul li a:hover {
     color: rgb(37, 240, 37);
 }
 
+/* Botões */
 .buttons button {
     position: relative;
-    top: 0%;
-    left: 63%;
-    padding: 05px 20px;
+    padding: 5px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
@@ -237,94 +235,76 @@ nav ul li a:hover {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Estilo específico para o botão "Continuar" */
+/* Botão "Continuar" */
 .buttons button.continuar {
-    background-color: rgb(27, 226, 27); /* Verde para o botão "Continuar" */
+    background-color: rgb(27, 226, 27);
     color: white;
 }
 
 .buttons button.continuar:hover {
-    background-color: rgb(51, 194, 51); /* Verde mais escuro ao passar o mouse */
+    background-color: rgb(51, 194, 51);
 }
 
-/* Estilo específico para o botão "Sair" */
+/* Botão "Sair" */
 .buttons button.sair {
-    background-color: transparent; /* Fundo transparente por padrão */
-    color: rgb(27, 226, 27); /* Texto verde */
-    border-color: rgb(27, 226, 27); /* Borda verde */
+    background-color: transparent;
+    color: rgb(27, 226, 27);
+    border-color: rgb(27, 226, 27);
 }
 
 .buttons button.sair:hover {
-    background-color: rgb(27, 226, 27); /* Fundo verde ao passar o mouse */
-    color: white; /* Texto branco ao passar o mouse */
+    background-color: rgb(27, 226, 27);
+    color: white;
 }
 
-/* Ajustes para resolução 1600x900 */
+/* Media Queries */
 @media screen and (max-width: 1600px) {
     header {
-     position: absolute;
-     left: 10%;
+        left: 10%;
     }
-    
+
     .h1 p {
-     font-size: 1.0em;
+        font-size: 1.0em;
     }
- 
+
     .h1 {
-     position: absolute;
-     top: 25%;
+        position: absolute;
+        top: 25%;
+        width: 690px;
     }
- 
+
     .quiz-btn {
-     position: absolute;
-     top: 40%;
+        position: absolute;
+        top: 40%;
     }
- 
+
     .p3 {
-     position: absolute;
-     top: 65%;
-     left: 20%;
+        position: absolute;
+        top: 65%;
+        left: 20%;
     }
- 
+
     .info {
-     position: absolute;
-     top: 80%;
-     left: 10%;
+        position: absolute;
+        top: 80%;
+        left: 10%;
     }
- 
-     #img1 {
-         width: 180%;
-     }
- 
-     #img1 > img {
-         width: 110%;
-         height: 70%; /* Mantém a proporção da imagem */
-         object-fit: cover;
-         display: block;
-         margin: 0;
-         padding: 0;
-         border: 0;
-         box-shadow: none;
-         z-index: -1;
-     }
- 
-     #img1::after {
-         content: '';
-         width: 130%;
-         height: 70%;
-         position: absolute;
-         top: 0;
-         left: 0;
-         background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-         z-index: 0;
-         pointer-events: none;
-     }
 
+    #img1 {
+        width: 180%;
+    }
 
+    #img1 > img {
+        width: 110%;
+        height: 70%;
+    }
 
- }
+    #img1::after {
+        width: 130%;
+        height: 70%;
+    }
+}
 
-/* Ajustes para resolução 1440x900 */
 @media screen and (max-width: 1440px) {
     .h1 p {
         font-size: 2.7vw;
@@ -338,88 +318,41 @@ nav ul li a:hover {
         font-size: 1.7vw;
     }
 
-    #img1::after {
-        content: '';
-        width: 100%;
-        height: 42%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
-    }
-
     .h1 {
-        font-size: 30px;
         position: absolute;
         top: 15%;
-    }
-
-    .h1 {
         width: 690px;
-    } 
-
-    .h1 p {
-        font-size: 10px;
     }
 
     .quiz-btn {
         position: absolute;
-        top: 40% !important;
-        left: 65% !important;
+        top: 40%;
+        left: 65%;
+    }
 
+    .p3 {
+        position: absolute;
+        top: 250%;
+        left: 20%;
+    }
+
+    .pqs {
+        position: absolute;
+        top: 290%;
+        left: -10%;
+    }
 }
 
-.p3 {
-    position: absolute;
-    top: 250% !important;
-    left: 20% !important;
-}
-
-.pqs {
-    position: absolute;
-    top: 290% !important;
-    left: -10%;
-}
-
-}
-
-
-
-/* Ajustes para resolução 1366x768 */
 @media screen and (max-width: 1366px) {
     #img1 {
-        position: relative;
-        width: 150% !important;
-        height: 110vh; /* Ajuste para ocupar a altura total da viewport */
-        overflow: hidden;
-    }
-    
-    #img1::after {  
-        content: '';
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
+        width: 150%;
+        height: 110vh;
     }
 
-    #img1 > img {
-        width: 100%;
-        height: 70%; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        z-index: -1;
+    #img1::after {
+        height: 70%;
     }
-    
+
     .h1 {
         position: absolute;
         top: 25%;
@@ -431,269 +364,153 @@ nav ul li a:hover {
 
     .quiz-btn {
         position: absolute;
-        top: 35%;  /* Ajuste a altura do botão conforme necessário */
-        left: 35%;  /* Centraliza o botão horizontalmente */
-        transform: translate(-230%, 340%);  /* Centraliza o botão horizontal e verticalmente */
+        top: 35%;
+        left: 35%;
+        transform: translate(-230%, 340%);
     }
-
-    
-
-    #quiz-btn {
-        width: 200px;  /* Ajuste o tamanho do botão conforme necessário */
-        height: 40px;  /* Ajuste a altura do botão */
-    }
-
-    .p3 p {
-        font-size: 24px;
-    }
-
 
     .p3 {
         position: absolute;
         top: 80%;
         left: 10%;
-        width: 80%;
     }
 
-    .navbar {
-        position: absolute;
-        left: 25%;
-    }
-
-    .info { 
-        position: absolute;
-        width: 100%; /* Mantém dentro do contêiner */       
+    .info {
         padding: 20px;
-        z-index: 1; /* Garante que a info esteja acima do gradiente */
-    }
-
-   .pqs {
-    position: absolute;
-    top: 290%;
-    left: 5%;
-    width: 850px;
-   }
-
-
-}
-
-@media screen and (max-width: 1280px) {
-    .p3 {
-        position: absolute;
-        top: 45% !important;
-        left: 10% !important;
+        z-index: 1;
     }
 
     .pqs {
         position: absolute;
-        top: -1510% !important;
+        top: 290%;
         left: 5%;
         width: 850px;
-       }
-
-    .quiz-btn {
-        position: absolute;
-        top: 25% !important;  /* Ajuste a altura do botão conforme necessário */
-        left: 38% !important;  /* Centraliza o botão horizontalmente */
-        transform: translate(-230%, 340%);  /* Centraliza o botão horizontal e verticalmente */
     }
-
-    .h1 {
-    position: absolute;
-    top: 20%;
-    }
-
-    #img1 {
-        position: relative;
-        width: 115% !important;
-        height: 60vh; /* Ajuste para ocupar a altura total da viewport */
-        overflow: hidden;
-    }
-    
-    #img1::after {  
-        content: '';
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    #img1 > img {
-        width: 100%;
-        height: 70%; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        z-index: -1;
-    }
-
 }
 
-/* Ajustes para resolução menor que 1024px */
 @media screen and (max-width: 1024px) {
-   body {
-    overflow-x: hidden;
-   }
-   
-    .nav-list {
-        position: absolute;
-        left: 23%;
-    }
-
-    .quiz-btn {
-        position: absolute;
-        top: 35%;  /* Ajuste a altura do botão conforme necessário */
-        left: 46% !important;  /* Centraliza o botão horizontalmente */
-        transform: translate(-230%, 340%);  /* Centraliza o botão horizontal e verticalmente */
-    }
-
-    
-
-    #quiz-btn {
-        width: 200px;  /* Ajuste o tamanho do botão conforme necessário */
-        height: 40px;  /* Ajuste a altura do botão */
-    }
-
-    #img1 {
-        position: relative;
-        width: 135%;
-        height: 110vh; /* Ajuste para ocupar a altura total da viewport */
-        overflow: hidden;
-    }
-    
-    #img1::after {  
-        content: '';
-        width: 100%;
-        height: 40%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    #img1 > img {
-        width: 100%;
-        height: 40%; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        z-index: -1;
-    }
-
-    .info { 
-        position: absolute;
-        width: 100%; /* Mantém dentro do contêiner */       
-        padding: 20px;
-        z-index: 1; /* Garante que a info esteja acima do gradiente */
-    }
-
-   .pqs {
-    position: absolute;
-    top: -1050% !important;
-    left: -4%;
-    width: 850px;
-   }
-
-
-
-    #p3 {
-        position: absolute;
-        left: 10%;
-        top: 43%; /* Verifique se essa posição faz sentido no layout */
-        width: 80%;
-    }
-
     .h1 {
         position: absolute;
-        top: 16%;
+        top: 20%;
+        left: 5%;
+        width: 100%;
     }
 
     .h1 p {
-        font-size: 2.5vw; /* Responsivo baseado na largura da viewport */
-    }
-}
-
-
-/* Ajustes para telas menores que 768px */
-@media screen and (max-width: 768px) {
-    .h1 p {
-        font-size: 4.5vw;
+        font-size: 2.0vw;
     }
 
     .quiz-btn {
-        top: 85%;
+        position: absolute;
+        top: 40%;
     }
 
     .p3 {
-        left: 5%;
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    header {
         position: absolute;
-        left: 2% !important;
+        top: 80%;
+        left: 10%;
     }
 
     .pqs {
-    position: absolute;
-    top: -1000% !important;
-    left: 15%;
-    width: 300px;
- }   
+        position: absolute;
+        top: 300%;
+        left: -20%;
+    }
 
-.info-box {
-    position: fixed;
-    left: 40%;
-    top: 25%;
+    #quiz-btn {
+        width: 100px;
+        height: 40px;
+        font-size: 12px;
+    }
 }
 
-.p3 {
-    position: absolute !important;
-    top: -508px !important;
-}
 
-.h1 {
-    width: 500px;
-    position: absolute;
-    top: 14% !important;
-    left: 5%;
-}
 
-.quiz-btn {
-    position: absolute;
-    top: 18% !important;
-    left: 68% !important;
-}
+@media screen and (max-width: 375px) {
+    header {
+        font-size: 10px;
+        width: 50%;
+    }
+    
+    .nav-list {
+        position: relative;
+        left: 18%;
+    }
 
-.h1 p {
-    font-size: 20px !important;
-}
+    .h1 {
+        position: absolute;
+        top: 13%;
+        left: 5%;
+        width: 70%;
+    }
 
- #img1 {
+    .h1 p {
+        font-size: 3.0vw;
+    }
+
+    #quiz-btn {
+        width: 80px;
+        height: 35px;
+        font-size: 10px;
+    }
+
+    .quiz-btn {
+        position: absolute;
+        top: 10%;
+        left: 55%;
+    }
+
+    .info {
+    margin-top: -30%;
+    }
+
+    .pqs {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: -100%;
+        left: -20%;
+        font-size: 10px;
+    }
+
+    .pqs p {
+        width: 130px;
+    }
+
+    .p3 {
+        position: absolute;
+        top: 40%; /* Ajuste para garantir que fique visível */
+        left: 6%; /* Ajuste a margem à esquerda */
+        width: 70%; /* Mantenha a largura dentro da tela */
+        max-width: 600px; /* Defina um máximo para evitar que fique muito grande */
+        padding: 30px; /* Adicione algum padding se necessário */
+        background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+        border-radius: 10px; /* Bordas arredondadas */
+    }
+
+    .p3 p{
+        font-size: 10px;
+    }
+
+    #img1 {
     position: relative;
-    width: 120% !important;
-    height: 110vh; /* Ajuste para ocupar a altura total da viewport */
+    width: 100%;
+    height: 90vh; /* Ocupa 90% da altura da viewport */
     overflow: hidden;
 }
 
-#img1::after {  
+#img1 > img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+#img1::after {
     content: '';
     width: 100%;
-    height: 35%;
+    height: 42%;
     position: absolute;
     top: 0;
     left: 0;
@@ -701,106 +518,5 @@ nav ul li a:hover {
     z-index: 0;
     pointer-events: none;
 }
-
-#img1 > img {
-    width: 100%;
-    height: 35%; /* Mantém a proporção da imagem */
-    object-fit: cover;
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    z-index: -1;
-}
-
-}
-
-/* Ajustes para telas menores que 600px */
-@media screen and (max-width: 600px) {
-    header {
-        padding: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #img1::after {
-        height: 35%;
-    }
-
-}
-
-@media screen and (max-width: 337px) {
     
 }
-
-@media screen and (max-width: 320px) {
-    #img1 {
-        width: 300%;
-    }
-
-    #img1 > img {
-        width: 70%;
-        height: 70%; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        z-index: -1;
-    }
-
-    #img1::after {
-        content: '';
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    header {
-        position: absolute;
-        left: -5%;
-    }
-
-    .header p{
-        left: 10%;
-    }
-
-    .p3 {
-        position: absolute;
-        top: 64%; 
-        font-size: 5px; }
-
-        .quiz-btn {
-            top: 50%;
-            width: 550px;
-        }
-
-        #quiz-btn {
-            width: 150px;
-        }
-
-
-        .h1 {
-            position: absolute;
-            top: 30%;
-        }
-
-        .h1 p {
-            width: 250px;
-            font-size:  10px;
-        }
-
-}
-
-
-
