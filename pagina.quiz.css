@@ -32,6 +32,11 @@ body {
     pointer-events: none;
 }
 
+.nav-list {
+    position: absolute;
+    left: 40%;
+}
+
 header {
     width: 100%;
     text-align: center;
@@ -89,7 +94,7 @@ nav ul li a:hover {
 /* Botão */
 .quiz-btn {
     position: absolute;
-    top: 73%;
+    top: 83%;
     left: 2%;
 }
 
@@ -113,7 +118,8 @@ nav ul li a:hover {
 /* Informação */
 .info {
     position: absolute;
-    top: 130%;
+    top: 110%;
+    left: -1%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -147,8 +153,8 @@ nav ul li a:hover {
 /* Estilos adicionais */
 .p3 {
     position: absolute;
-    top: 100%;
-    left: 25%;
+    top: 90%;
+    margin-left: -5%;
     width: 950px;
 }
 
@@ -258,6 +264,142 @@ nav ul li a:hover {
 }
 
 /* Media Queries */
+
+
+
+@media screen and (max-width: 2560px) {
+    #img1 {
+        position: relative;
+        width: 100%;
+        height: 90vh; /* Ocupa 90% da altura da viewport */
+        overflow: hidden;
+    }
+    
+    #img1 > img {
+        width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+    
+    #img1::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .p3 {
+        left: 30%;
+    }
+
+    .p3 p {
+        font-size: 50px;
+    }
+
+
+
+    .pqs {
+        position: absolute;
+        top: 100%;
+        left: 20%;
+        width: 1400px;
+        
+    }
+
+    .pqs p {
+        font-size: 30px;
+    }
+
+    .quiz-btn {
+        margin-top: -250px;
+    padding: 10px;
+    }
+
+    .h1 {
+        width: 1500px;
+    }
+
+#info-box {
+    width: 700px;
+    height: 230px;
+    font-size: 18px;
+}
+
+}
+
+@media screen and (max-width: 1920px) {
+    #img1 {
+        position: relative;
+        width: 100%;
+        height: 90vh; /* Ocupa 90% da altura da viewport */
+        overflow: hidden;
+    }
+    
+    #img1 > img {
+        width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+    
+    #img1::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .p3 {
+        left: 30%;
+    }
+
+    .p3 p {
+        font-size: 30px;
+    }
+
+
+
+    .pqs {
+        position: absolute;
+        top: -110%;
+        left: 13%;
+        width: 1400px;
+        
+    }
+
+    .pqs p {
+        font-size: 18px;
+    }
+
+    .quiz-btn {
+        margin-top: -250px;
+    padding: 10px;
+    }
+
+    .h1 {
+        width: 1500px;
+    }
+
+#info-box {
+    width: 700px;
+    height: 230px;
+    font-size: 18px;
+}
+}
+
 @media screen and (max-width: 1600px) {
     header {
         left: 10%;
@@ -449,15 +591,15 @@ nav ul li a:hover {
     }
 
     #quiz-btn {
-        width: 80px;
-        height: 35px;
+        width: 90px;
+        height: 30px;
         font-size: 10px;
     }
 
     .quiz-btn {
         position: absolute;
-        top: 10%;
-        left: 55%;
+        top: 40%;
+        left: 68%;
     }
 
     .info {
@@ -480,8 +622,8 @@ nav ul li a:hover {
     .p3 {
         position: absolute;
         top: 40%; /* Ajuste para garantir que fique visível */
-        left: 6%; /* Ajuste a margem à esquerda */
-        width: 70%; /* Mantenha a largura dentro da tela */
+        left: -1%; /* Ajuste a margem à esquerda */
+        width: 90%; /* Mantenha a largura dentro da tela */
         max-width: 600px; /* Defina um máximo para evitar que fique muito grande */
         padding: 30px; /* Adicione algum padding se necessário */
         background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
@@ -489,7 +631,7 @@ nav ul li a:hover {
     }
 
     .p3 p{
-        font-size: 10px;
+        font-size: 15px;
     }
 
     #img1 {
@@ -518,5 +660,17 @@ nav ul li a:hover {
     z-index: 0;
     pointer-events: none;
 }
+
+#info-box {
+    width: 70%;
+    height: 190px;
+    font-size: 10px;
+    position: absolute;
+    top: 25%;
+}
     
+.info-box .info_title {
+    width: 5%;
+}
+
 }
