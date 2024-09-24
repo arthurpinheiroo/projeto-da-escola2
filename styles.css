@@ -1535,10 +1535,7 @@ footer {
 }
 
 @media sreen and (max-width: 360px) {
-.nav-list {
-    position: relative;
-    left: 50%;
-}
+
 }
 
 @media screen and (max-width: 320px) {
