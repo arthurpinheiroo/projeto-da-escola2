@@ -120,7 +120,7 @@ nav ul li a:hover {
     position: absolute;
     top: 110%;
     left: 1%;
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -760,6 +760,46 @@ nav ul li a:hover {
 
 }
 
+@media screen and (max-width: 360px) {
+    .navbar {
+        left: -18%;
+    }
+
+    .quiz-btn {
+        position: absolute;
+        top: 8%;
+        left: 71%;
+    }
+
+    #img1 {
+        position: relative;
+        width: 110%;
+        height: 105%; /* Ocupa 90% da altura da viewport */
+        overflow: hidden;
+    }
+    
+    #img1 > img {
+        width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+    
+    #img1::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+}
+
 @media screen and  (max-width: 320px) {
     header {
         font-size: 10px;
@@ -768,19 +808,19 @@ nav ul li a:hover {
     
     .nav-list {
         position: relative;
-        margin-left: -90%;
-        margin-top: -1;
+        left: 9%;
+        top: 1;
     }
 
     .h1 {
         position: absolute;
-        top: 13%;
-        left: 5%;
-        width: 80%;
+        top: 16%;
+        left: 2%;
+        width: 90%;
     }
 
     .h1 p {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     #quiz-btn {
@@ -791,8 +831,8 @@ nav ul li a:hover {
 
     .quiz-btn {
         position: absolute;
-        top: 20%;
-        left: 68%;
+        top: 5%;
+        left: 77%;
     }
 
     .info {
@@ -803,13 +843,14 @@ nav ul li a:hover {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: -100%;
-        left: -20%;
+        top:  100%;
+        left: -15%;
         font-size: 10px;
     }
 
     .pqs p {
-        width: 130px;
+        font-size: 10px;
+        width: 150px;
     }
 
     .p3 {
@@ -833,7 +874,7 @@ nav ul li a:hover {
 
     #img1 {
     position: relative;
-    width: 100%;
+    width: 105%;
     height: 55%; /* Ocupa 90% da altura da viewport */
     overflow: hidden;
 }

@@ -1534,6 +1534,13 @@ footer {
 
 }
 
+@media sreen and (max-width: 360px) {
+.nav-list {
+    position: relative;
+    left: 50%;
+}
+}
+
 @media screen and (max-width: 320px) {
     #tip-generator {
         width: 230px;
@@ -1574,6 +1581,13 @@ footer {
         left: 0;
         opacity: 0.57;
         transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    #contact {
+        position: absolute;
+        top: 300%;
+        left: -1%;
+        width: 330px;
     }
 
 }
