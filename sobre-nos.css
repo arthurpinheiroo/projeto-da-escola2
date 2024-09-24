@@ -366,8 +366,8 @@ nav ul li a:hover {
     
     .img1 {
         position: absolute;
-        left: 63%;
-        top: 23%;
+        left: 64%;
+        top: 29%;
     }
 
     .img1 img {
@@ -757,28 +757,28 @@ nav ul li a:hover {
 
 @media screen and (max-width: 320px) {
     header {
-        left: 35%;
+        left: 1%;
     }
 
     .container {
-        top: 10%;
-        left: 43%;
-        width: 800px;
+        top: 15%;
+        left: 1%;
+        width: 300px;
     }
 
     .container p {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .img1 {
-        top: 150%;
-        left: 30%;
+        top: 157%;
+        left: 20%;
     }
 
     .circle {
-        top: 193%;
-        left: 94%;
-        height: 450px;
-        width: 450px;
+        top: 103%;
+        left: 54%;
+        height: 250px;
+        width: 250px;
     }
 }
