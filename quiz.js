@@ -284,11 +284,12 @@ function showResults() {
     answerOptions.forEach(option => option.style.display = 'none');
     answerBtn.style.display = 'none';
 
-    // Mostra os botões de ação
+    // Mostra os botões de ação e o texto de resultados
     quizActions.classList.remove('hide'); 
     finalScoreEl.textContent = score;
     totalQuestionsEl.textContent = quizData.length;
 }
+
 
 // Reinicia o quiz
 document.getElementById('restartBtn').addEventListener('click', () => {

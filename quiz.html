@@ -17,10 +17,10 @@
         <h2 id="question">Pergunta do Quiz</h2>
         <div id="quiz">
             <ul class="answer-options">
-                <li id="A" class="answer-option">Resposta A</li>
-                <li id="B" class="answer-option">Resposta B</li>
-                <li id="C" class="answer-option">Resposta C</li>
-                <li id="D" class="answer-option">Resposta D</li>
+                <li class="answer-option" data-option="a" id="A">Resposta A</li>
+                <li class="answer-option" data-option="b" id="B">Resposta B</li>
+                <li class="answer-option" data-option="c" id="C">Resposta C</li>
+                <li class="answer-option" data-option="d" id="D">Resposta D</li>
             </ul>
             <!-- Botão de responder -->
             <button id="answerBtn" class="hide">
@@ -30,9 +30,11 @@
 
         <!-- Botões de ação ao final do quiz -->
         <div class="quiz-actions hide">
+            <p id="resultsText">Você acertou <span id="finalScore">0</span> de <span id="totalQuestions">0</span> perguntas.</p>
             <button class="restart" id="restartBtn"><i class="fas fa-redo"></i> Recomeçar Quiz</button>
             <button class="exit-quiz" id="exitBtn"><i class="fas fa-sign-out-alt"></i> Sair Quiz</button>
         </div>
+        
     </div>
 
     <script src="quiz.js"></script>
