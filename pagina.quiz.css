@@ -917,6 +917,29 @@ nav ul li a:hover {
 } 
 }
 
+@media screen and (max-width: 450px) {
+    .navbar {
+        left: 40%;
+    }
+
+    .p3 {
+        margin-top: -10%;
+        left: 10%;
+    }
+
+    .pqs {
+        margin-top: -25%;
+        left: -10%;
+    }
+
+    .quiz-btn {
+        position: absolute;
+        margin-top: -1%;
+        left: 58%;
+    }
+
+}
+
 @media screen and (max-width: 430px) {
     header {
         font-size: 10px;

@@ -1458,6 +1458,28 @@ footer {
     }
 }
 
+@media screen and (max-width: 450px) {
+    #contact {
+        width: 71%;
+        position: absolute;
+        margin-top: 290%;
+        left: 10%;
+    }
+
+    #tip-generator {
+        width: 290px;
+        height: 280px;
+        position: absolute;
+        margin-top: 48%;
+        left: 48%;
+    }
+
+    .header-content {
+        left: -5%;
+    }
+
+}
+
 @media screen and (max-width: 420px) {
     #tip-generator {
         width: 290px;
@@ -1530,6 +1552,55 @@ footer {
         position: absolute;
         margin-top: 470%;
         left: 10%;
+    }
+
+}
+
+@media screen and (max-height: 550px) {
+    #tip-generator {
+        width: 290px;
+        height: 250px;
+        position: absolute;
+        margin-top: 24%;
+        left: 50%;
+    }
+
+    .header-content {
+        left: -4%;
+    }
+
+}
+
+@media screen and (max-height: 378px) {
+    .navbar {
+        left: -3%;
+    }
+    
+    #tip-generator {
+        width: 290px;
+        height: 250px;
+        position: absolute;
+        margin-top: 24%;
+        left: 50%;
+    }
+
+    .header-content {
+        left: -6%;
+    }
+
+    .tex-1 {
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+
+    .tex-2 {
+        margin-left: 20%;
+        margin-top: 20%;
+    }
+
+    .tex-3 {
+        margin-left: 20%;
+        margin-top: 20%;
     }
 
 }
