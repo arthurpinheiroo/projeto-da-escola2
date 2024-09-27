@@ -764,6 +764,47 @@ nav ul li a:hover {
 }
 }
 
+@media screen and (max-height: 640px) {
+    .navbar {
+        left: 50%;
+    }
+
+    
+    .h1 {
+        position: absolute;
+        top: 16%;
+        left: 2%;
+        width: 90%;
+    }
+
+    .h1 p {
+        font-size: 20px;
+    }
+
+.quiz-btn {
+        position: absolute;
+        top: 22%;
+        left: 35%;
+    }
+
+    .h1 p{
+        font-size: 20px;
+    }
+    
+    .pqs {
+        position: absolute;
+        margin-left: 10%;
+        margin-top: 40%;
+    }
+
+    .p3 {
+        position: absolute;
+        margin-top: 17%;
+        margin-left: 5%;
+    }
+
+}
+
 @media screen and (max-width: 540px) {
     header {
         font-size: 10px;
@@ -890,13 +931,13 @@ nav ul li a:hover {
 
     .h1 {
         position: absolute;
-        top: 16%;
+        top: 23%;
         left: 2%;
         width: 90%;
     }
 
     .h1 p {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     #quiz-btn {
@@ -907,7 +948,7 @@ nav ul li a:hover {
 
     .quiz-btn {
         position: absolute;
-        top: 6%;
+        top: 14%;
         left: 58%;
     }
 
@@ -919,7 +960,7 @@ nav ul li a:hover {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top:  -250%;
+        top:  30%;
         left: -10%;
         font-size: 10px;
     }
@@ -931,7 +972,7 @@ nav ul li a:hover {
 
     .p3 {
         position: absolute;
-        top: 40%; /* Ajuste para garantir que fique visível */
+        top: 55%; /* Ajuste para garantir que fique visível */
         left: 2%; /* Ajuste a margem à esquerda */
         width: 90%; /* Mantenha a largura dentro da tela */
         max-width: 600px; /* Defina um máximo para evitar que fique muito grande */
