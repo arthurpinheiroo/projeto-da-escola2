@@ -223,8 +223,6 @@ function loadQuiz() {
         answerOptions[1].textContent = currentQuizData.b;
         answerOptions[2].textContent = currentQuizData.c;
         answerOptions[3].textContent = currentQuizData.d;
-
-        questionsRemainingEl.textContent = `Perguntas restantes: ${quizData.length - currentQuiz - 1}`;
     }
 }
 
@@ -257,8 +255,8 @@ answerBtn.addEventListener('click', () => {
 
 // Verifica a resposta correta e avança no quiz
 function checkAnswer(selectedOption) {
-    const selectedAnswer = selectedOption.id.toLowerCase();
-    const correctAnswer = quizData[currentQuiz].correct;
+    const selectedAnswer = selectedOption.getAttribute('data-option'); // Obter a resposta selecionada
+    const correctAnswer = quizData[currentQuiz].correct.toLowerCase(); // Verificar resposta correta
 
     if (selectedAnswer === correctAnswer) {
         selectedOption.classList.add('correct');
@@ -289,7 +287,6 @@ function showResults() {
     finalScoreEl.textContent = score;
     totalQuestionsEl.textContent = quizData.length;
 }
-
 
 // Reinicia o quiz
 document.getElementById('restartBtn').addEventListener('click', () => {
