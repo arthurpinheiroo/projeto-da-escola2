@@ -1154,9 +1154,54 @@ footer {
 /* Para dispositivos com largura de até 768px */
 
  
+@media screen and (max-height: 720px) {
+    #tip-generator {
+        width: 290px;
+        height: 240px;
+        position: absolute;
+        top: 30%;
+        margin-left: 1%;
+    }
 
+    .header-content {
+        margin-left: 10%;
+    }
 
+    .img1 {
+        left: 3%;
+    }
 
+}
+
+@media screen and (max-height: 756px) {
+    #tip-generator {
+        width: 290px;
+        height: 240px;
+        position: absolute;
+        margin-top: 15%;
+        left: 50%;
+    }
+
+    .header-content {
+        left: -5%;
+    }
+
+    .tex-1 {
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+
+    .tex-2 {
+        margin-left: 20%;
+        margin-top: 20%;
+    }
+
+    .tex-3 {
+        margin-left: 20%;
+        margin-top: 20%;
+    }
+
+}
 
 @media screen and (max-width: 720px) {
     #tip-generator {

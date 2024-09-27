@@ -448,71 +448,7 @@ nav ul li a:hover {
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .navbar {
-        position: absolute;
-        left: 28%;
-    }
-   
-    .quiz-btn {
-        left: 4%;
-        top: 39%;
-    }
 
-    .p3 {
-        position: absolute;
-        top: 39%;
-        left: 20%;
-    }
-
-    .h1 {
-        position: absolute;
-        top: 13%;
-        left: 5%;
-    }
-
-    .h1 p{
-        font-size: 40PX;
-        width: 850px;
-    }
-
-    .pqs {
-        position: relative;
-        margin-top: -70%;
-        left: -10%;
-    }
-
-    #img1 {
-        position: relative;
-        width: 100%;
-        height: 90vh; /* Ocupa 90% da altura da viewport */
-        overflow: hidden;
-    }
-    
-    #img1 > img {
-        width: 100%;
-        height: auto; /* Mantém a proporção da imagem */
-        object-fit: cover;
-        display: block;
-        margin: 0;
-    }
-    
-    #img1::after {
-        content: '';
-        width: 100%;
-        height: 42%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    .info-box {
-        left: 45%;
-    }
-}
 
 @media screen and (max-width: 1366px) {
     #img1 {
@@ -616,6 +552,11 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+    
+    .navbar {
+        left: 50%;
+    }
+
     .h1 {
         position: absolute;
         top: 20%;
@@ -650,6 +591,62 @@ nav ul li a:hover {
         height: 40px;
         font-size: 12px;
     }
+}
+
+@media screen and (max-height: 756px) {
+    .navbar {
+        position: relative;
+        margin-left: -29%;
+    }
+    
+    #img1 {
+        position: relative;
+        width: 105%;
+        height: 15%; /* Ocupa 90% da altura da viewport */
+        overflow: hidden;
+    }
+    
+    #img1 > img {
+        width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+    
+    #img1::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .pqs {
+        margin-top: 50%;
+        left: 7%;
+    }
+
+    .p3 {
+        margin-top: 30%;
+        margin-left: 5%;
+
+}
+
+.h1 p{
+    font-size: 30px;
+}
+
+.quiz-btn {
+    position: absolute;
+    top: 70%;
+    left: 29%;
+}
+
 }
 
 @media screen and (max-width: 720px) {
@@ -764,6 +761,25 @@ nav ul li a:hover {
 }
 }
 
+@media screen and (max-height: 720px) {
+    .navbar {
+        left: 1%;
+    }
+
+    .quiz-btn {
+        position: absolute;
+        top: 48%;
+        left: 31%;
+    }
+
+    .p3 {
+        position: relative;
+        margin-top: 3%;
+        margin-left: -1%;
+    }
+
+}
+
 @media screen and (max-height: 640px) {
     .navbar {
         left: 50%;
@@ -798,8 +814,8 @@ nav ul li a:hover {
     }
 
     .p3 {
-        position: absolute;
-        margin-top: 17%;
+        position: relative;
+        margin-top: 20%;
         margin-left: 5%;
     }
 
@@ -905,15 +921,20 @@ nav ul li a:hover {
 }
 
 #info-box {
-    width: 70%;
+    width: 90%;
     height: 190px;
     font-size: 10px;
     position: absolute;
     top: 25%;
+    left: 50%;
+}
+
+.buttons {
+    margin-left: -70%;
 }
     
 .info-box .info_title {
-    width: 5%;
+    width: 77%;
 } 
 }
 
