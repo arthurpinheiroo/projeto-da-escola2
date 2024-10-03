@@ -78,121 +78,7 @@ const quizData = [
         c: "Construindo mais usinas nucleares",
         d: "Aumentando o consumo de eletricidade em horários de pico",
         correct: "B"
-    },
-    // Novas perguntas
-    {
-        question: "Qual é o principal gás de efeito estufa responsável pelo aquecimento global?",
-        a: "Oxigênio",
-        b: "Metano",
-        c: "Dióxido de carbono",
-        d: "Nitrato",
-        correct: "C"
-    },
-    {
-        question: "Qual prática ajuda a conservar a energia elétrica em uma residência?",
-        a: "Manter as luzes acesas o dia todo",
-        b: "Usar lâmpadas LED e apagar luzes desnecessárias",
-        c: "Usar aquecedores elétricos durante o verão",
-        d: "Deixar os aparelhos eletrônicos em modo standby",
-        correct: "B"
-    },
-    {
-        question: "Qual é uma das consequências do desmatamento para a biodiversidade?",
-        a: "Aumento na qualidade do solo",
-        b: "Perda de habitat para muitas espécies",
-        c: "Aumento da quantidade de água disponível",
-        d: "Menor emissão de poluentes",
-        correct: "B"
-    },
-    {
-        question: "Como o transporte individual afeta a qualidade do ar?",
-        a: "Reduzindo a emissão de gases poluentes",
-        b: "Aumentando a emissão de gases poluentes e partículas",
-        c: "Melhorando a qualidade do ar",
-        d: "Não afeta a qualidade do ar",
-        correct: "B"
-    },
-    {
-        question: "Qual é um dos principais impactos das mudanças climáticas nos oceanos?",
-        a: "Redução do nível do mar",
-        b: "Aumento da temperatura da água e acidificação",
-        c: "Aumento da quantidade de peixes",
-        d: "Redução da salinidade da água",
-        correct: "B"
-    },
-    {
-        question: "Qual é um método eficaz para economizar água no jardim?",
-        a: "Regar as plantas em horários mais quentes do dia",
-        b: "Usar um sistema de irrigação eficiente e plantas nativas",
-        c: "Deixar as mangueiras abertas o tempo todo",
-        d: "Regar as plantas todos os dias, sem exceção",
-        correct: "B"
-    },
-    {
-        question: "Qual é a principal vantagem da utilização de energia solar?",
-        a: "Reduz o custo do combustível fóssil",
-        b: "Gera energia sem emissões de gases de efeito estufa",
-        c: "Aumenta a dependência de combustíveis fósseis",
-        d: "Diminui a eficiência energética",
-        correct: "B"
-    },
-    {
-        question: "Qual é um dos benefícios da agricultura orgânica em relação à agricultura convencional?",
-        a: "Uso intensivo de pesticidas químicos",
-        b: "Redução do impacto ambiental e preservação do solo",
-        c: "Uso de fertilizantes químicos em larga escala",
-        d: "Maior emissão de gases de efeito estufa",
-        correct: "B"
-    },
-    {
-        question: "Qual é a principal causa da acidificação dos oceanos?",
-        a: "Aumento da temperatura global",
-        b: "Redução da poluição atmosférica",
-        c: "Aumento da absorção de dióxido de carbono pelos oceanos",
-        d: "Diminuição dos níveis de CO2 atmosférico",
-        correct: "C"
-    },
-    {
-        question: "Como o conceito de economia circular pode beneficiar o meio ambiente?",
-        a: "Ao aumentar a produção de resíduos",
-        b: "Ao promover a reutilização e reciclagem de recursos",
-        c: "Ao usar mais recursos naturais",
-        d: "Ao descartar produtos sem valor",
-        correct: "B"
-    },
-    {
-        question: "O que é uma pegada de carbono?",
-        a: "A quantidade de água usada diariamente",
-        b: "A quantidade de resíduos gerados por uma pessoa",
-        c: "A quantidade de gases de efeito estufa emitidos por uma pessoa ou atividade",
-        d: "A quantidade de energia elétrica consumida em um mês",
-        correct: "C"
-    },
-    {
-        question: "Qual é uma das maneiras de reduzir o consumo de plásticos descartáveis?",
-        a: "Utilizar sacolas plásticas para todas as compras",
-        b: "Usar garrafas e recipientes reutilizáveis",
-        c: "Comprar mais produtos embalados em plástico",
-        d: "Descartar plásticos recicláveis no lixo comum",
-        correct: "B"
-    },
-    {
-        question: "Como a preservação dos ecossistemas pode ajudar a prevenir desastres naturais?",
-        a: "Reduzindo a diversidade biológica",
-        b: "Aumentando a resistência dos ecossistemas e absorção de água",
-        c: "Desmatando áreas de floresta",
-        d: "Aumentando a urbanização das áreas naturais",
-        correct: "B"
-    },
-    {
-        question: "O que é um ecossistema?",
-        a: "Um lugar com apenas plantas",
-        b: "A interação entre organismos vivos e seu ambiente",
-        c: "Um tipo de solo específico",
-        d: "Um grupo de animais que vivem juntos",
-        correct: "B"
     }
-
 ];
 
 let currentQuiz = 0;
@@ -223,6 +109,9 @@ function loadQuiz() {
         answerOptions[1].textContent = currentQuizData.b;
         answerOptions[2].textContent = currentQuizData.c;
         answerOptions[3].textContent = currentQuizData.d;
+
+        // Reativa o botão "Responder" após carregar a nova pergunta
+        answerBtn.disabled = false;
     }
 }
 
@@ -248,8 +137,13 @@ answerOptions.forEach(option => {
 // Verifica a resposta selecionada ao clicar no botão
 answerBtn.addEventListener('click', () => {
     const selectedOption = document.querySelector('.answer-option.selected');
+    
     if (selectedOption) {
+        answerBtn.disabled = true; // Desativa o botão "Responder" logo após o clique
         checkAnswer(selectedOption);
+    } else {
+        // Exibe um alerta se nenhuma opção for selecionada
+        alert("Por favor, selecione uma resposta antes de clicar em 'Responder'.");
     }
 });
 

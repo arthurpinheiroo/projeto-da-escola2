@@ -175,17 +175,15 @@ main {
 
 /* Seção Contatos */
 #contact {
-    border-radius: 15px;
     padding: 30px;
     text-align: center;
     backdrop-filter: blur(6px);
-    margin-top: 40px;
+    margin-top: 300px;
     animation: fadeIn 2s ease-in-out;
-    width: 1200px;
-    max-width: 1000px;
+    width: 2200px;
     position: relative;
-    margin-left: -1%;
-    background-color: #091246;
+    margin-left: -105%;
+    background-color: #000000;
     color: white;
 }
 
@@ -461,17 +459,13 @@ footer {
       }
     
       #contact {
-        border-radius: 15px;
         padding: 30px;
         text-align: center;
         backdrop-filter: blur(6px);
         margin-top: 40px;
         animation: fadeIn 2s ease-in-out;
-        width: 520px;
-        max-width: 1000px;
         position: relative;
         left: 24%;
-        background-color: #091246;
         color: white;
       }
 }
@@ -562,11 +556,8 @@ footer {
       backdrop-filter: blur(6px);
       margin-top: 40px;
       animation: fadeIn 2s ease-in-out;
-      width: 500px;
-      max-width: 1000px;
       position: relative;
       left: 13%;
-      background-color: #091246;
       color: white;
     }
 }
