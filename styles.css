@@ -550,7 +550,6 @@ footer {
     }
   
     #contact {
-      border-radius: 15px;
       padding: 30px;
       text-align: center;
       backdrop-filter: blur(6px);
@@ -645,19 +644,19 @@ footer {
     
         .tex-1 {
             position: relative;
-            left: -10%;
+            left: -5%;
             margin-top: 5%;
         }
         
         .tex-2 {
             position: relative;
-            left: -10%;
+            left: -5%;
             margin-top: 20%;
         }
         
         .tex-3 {
             position: relative;
-            left: -10%;
+            left: -5%;
             margin-top: 20%;
         }
 }
@@ -713,7 +712,7 @@ footer {
             position: relative;
             width: 100%; /* Use largura de 100% para ser responsivo */
             height: 350px; /* Altura fixa */
-            left: 0;
+            left: 10;
         }
     
         /* Overlay para escurecer a imagem */
@@ -759,6 +758,13 @@ footer {
             position: relative;
             left: -1%;
             margin-top: 20%;
+        }
+
+        #contact {
+            width: 110%;
+            position: absolute;
+            margin-top: 20%;
+            left: 102%;
         }
 }
 
@@ -856,6 +862,13 @@ footer {
         .tex-3 {
             margin-left: 18%;
             margin-top: 20%;
+        }
+
+        #contact {
+            width: 110%;
+            position: absolute;
+            margin-top: 20%;
+            left: 102%;
         }
 }
 
@@ -957,6 +970,13 @@ footer {
             margin-left: 18%;
             margin-top: 20%;
         }
+
+        #contact {
+            width: 110%;
+            position: absolute;
+            margin-top: 20%;
+            left: 102%;
+        }
     
 }
 
@@ -998,7 +1018,7 @@ footer {
         background-color: #000;
         position: relative;
         width: 100%;
-        height: 480px;
+        height: 380px;
         left: -1%;
         margin-top: -5%;
     }
@@ -1055,17 +1075,15 @@ footer {
     }
 
     #contact {
-        width: 68%;
+        width: 110%;
         position: absolute;
         margin-top: 20%;
-        left: 14%;
+        left: 102%;
     }
 
 }
 
-@media screen and (max-width: 500px) {
 
-}
     
 
 @media screen and (max-width: 820px) {
@@ -1586,8 +1604,8 @@ footer {
     #contact {
         width: 71%;
         position: absolute;
-        margin-top: 470%;
-        left: 10%;
+        margin-top: 400%;
+        left: 120%;
     }
 
 }
@@ -1690,7 +1708,7 @@ footer {
     #contact {
         position: absolute;
         top: 300%;
-        left: -1%;
+        left: 80%;
         width: 330px;
     }
 
